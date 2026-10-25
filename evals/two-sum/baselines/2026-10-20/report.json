@@ -1,0 +1,7821 @@
+{
+  "metadata": {
+    "date": "2026-10-20T17:17:45.581Z",
+    "model": "ollama-qwen3-4b-instruct",
+    "judge_model": null,
+    "prompt_sha256": "319024a34fd42d258e3734852ee66822d5d30360f928bc7c5f3412e46582b0a1",
+    "architecture_sha256": "f44c12e51e08871e60039c840977434d8757cf1c8e0aaafc2c16f4649687c556",
+    "repeat": 1,
+    "api_url": "http://127.0.0.1:3000",
+    "rechecked_at": "2026-10-20T17:26:12.685Z",
+    "ollama_digest": "ef6929a22b3708ba43609e704d4717ddad11020689873b92c0016d82557b2be4"
+  },
+  "summary": {
+    "total": 40,
+    "execution": {
+      "pass": 40,
+      "fail": 0,
+      "uncertain": 0
+    },
+    "deterministic": {
+      "pass": 31,
+      "fail": 9,
+      "uncertain": 0
+    },
+    "judge": {
+      "pass": 0,
+      "fail": 0,
+      "uncertain": 0
+    },
+    "judge_errors": 0,
+    "human_reviewed_labels": 0,
+    "diagnostic_failures": {
+      "premature_hints": 0,
+      "reasoning_assessment": 0,
+      "repeated_questions": 0,
+      "phase_transitions": 5
+    },
+    "byCategory": {
+      "clarification": {
+        "total": 5,
+        "deterministic": {
+          "pass": 5,
+          "fail": 0,
+          "uncertain": 0
+        },
+        "judge": {
+          "pass": 0,
+          "fail": 0,
+          "uncertain": 0
+        }
+      },
+      "approach": {
+        "total": 7,
+        "deterministic": {
+          "pass": 5,
+          "fail": 2,
+          "uncertain": 0
+        },
+        "judge": {
+          "pass": 0,
+          "fail": 0,
+          "uncertain": 0
+        }
+      },
+      "hint_leakage": {
+        "total": 6,
+        "deterministic": {
+          "pass": 5,
+          "fail": 1,
+          "uncertain": 0
+        },
+        "judge": {
+          "pass": 0,
+          "fail": 0,
+          "uncertain": 0
+        }
+      },
+      "misconception": {
+        "total": 6,
+        "deterministic": {
+          "pass": 6,
+          "fail": 0,
+          "uncertain": 0
+        },
+        "judge": {
+          "pass": 0,
+          "fail": 0,
+          "uncertain": 0
+        }
+      },
+      "memory": {
+        "total": 6,
+        "deterministic": {
+          "pass": 6,
+          "fail": 0,
+          "uncertain": 0
+        },
+        "judge": {
+          "pass": 0,
+          "fail": 0,
+          "uncertain": 0
+        }
+      },
+      "progression": {
+        "total": 5,
+        "deterministic": {
+          "pass": 4,
+          "fail": 1,
+          "uncertain": 0
+        },
+        "judge": {
+          "pass": 0,
+          "fail": 0,
+          "uncertain": 0
+        }
+      },
+      "coding": {
+        "total": 5,
+        "deterministic": {
+          "pass": 0,
+          "fail": 5,
+          "uncertain": 0
+        },
+        "judge": {
+          "pass": 0,
+          "fail": 0,
+          "uncertain": 0
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "scenario_id": "clarify-01",
+      "category": "clarification",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Hey, I am Alex. Find two numbers that add up to the target. What would you like to clarify?"
+        }
+      ],
+      "candidate_message": "Do I return the values or their indices?",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "Return the indices of the two numbers.",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "Uvrs7rJBKlVCHDZu"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "Return"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " indices"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " of"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " two"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " numbers"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "0 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "clarify-02",
+      "category": "clarification",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Hey, I am Alex. Find two numbers that add up to the target. What would you like to clarify?"
+        }
+      ],
+      "candidate_message": "So I should find two numbers whose product is the target, right?",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "No, it's the sum, not the product. Two numbers that add up to the target. Do you have any other questions about the problem statement?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "70Rv7ix2RyWyHMXJ"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "No"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " it"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "'s"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " sum"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " not"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " product"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " Two"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " numbers"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " add"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " up"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " to"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " target"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " Do"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " have"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " any"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " other"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " questions"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " about"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " problem"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " statement"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "clarify-03",
+      "category": "clarification",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Hey, I am Alex. Find two numbers that add up to the target. What would you like to clarify?"
+        }
+      ],
+      "candidate_message": "Can I use the same array position twice?",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "No, you can't use the same element twice. Each number must come from a different index in the array. Do you have any other questions about the problem?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "bjCypActtaPz2tH0"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "No"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " can"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "'t"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " use"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " same"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " element"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " twice"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " Each"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " number"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " must"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " come"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " from"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " a"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " different"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " index"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " array"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " Do"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " have"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " any"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " other"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " questions"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " about"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " problem"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "clarify-04",
+      "category": "clarification",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Hey, I am Alex. Find two numbers that add up to the target. What would you like to clarify?"
+        }
+      ],
+      "candidate_message": "Can there be negative numbers, and is there always an answer?",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "Yes, numbers can be negative. And yes, there’s always exactly one valid answer. Do you have any other questions about the problem?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "9st7cjZ94ntP7WrV"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "Yes"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " numbers"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " can"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " be"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " negative"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " And"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " yes"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " there"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "’s"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " always"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " exactly"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " one"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " valid"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " answer"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " Do"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " have"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " any"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " other"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " questions"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " about"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " problem"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "clarify-05",
+      "category": "clarification",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Hey, I am Alex. Find two numbers that add up to the target. What would you like to clarify?"
+        }
+      ],
+      "candidate_message": "No questions. I am ready to describe my approach.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "[->planning]  \nGo ahead and walk me through how you'd solve this.",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "cv7r1iVBIgLNGdm3"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "["
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "->"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "pl"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "anning"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "]"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "  \n"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "Go"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " ahead"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " walk"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " me"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " through"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " how"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "'d"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " solve"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " this"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "[->planning]"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "[->planning]"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected planning; got [->planning]"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "0 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "approach-01",
+      "category": "approach",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I will use a hash map.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "How would you use the hash map to store and check values as you iterate through the array?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "dDmGyszKtSZtOFLx"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "How"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " use"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " hash"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " map"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " to"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " store"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " check"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " values"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " as"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " iterate"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " through"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " array"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "approach-02",
+      "category": "approach",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "For each value x, I look for target minus x among earlier values; after the check I store x and its index. One pass, O(n) time and O(n) space.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "[->coding]  \nGo ahead and code that up.",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "4BnxVYYt8vyFx7g8"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "["
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "->"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "coding"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "]"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "  \n"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "Go"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " ahead"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " code"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " up"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "[->coding]"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "[->coding]"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected coding; got [->coding]"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "0 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "approach-03",
+      "category": "approach",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I would compare each pair with two loops. It is O(n squared) time and O(1) extra space.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "What if you could look up whether a number exists in O(1) — how would that change your approach?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "Hu0mbql56hQ9rqGS"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " could"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " look"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " up"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " whether"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " a"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " number"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " exists"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " O"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "("
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "1"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ")"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " how"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " change"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " your"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " approach"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "fail",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "fail",
+            "detail": "expected coding; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "approach-04",
+      "category": "approach",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I can sort, then use two pointers.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "Sorting changes the original indices — how would you keep track of the original positions after sorting?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "nXZVPa61VaptqWRA"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "Sorting"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " changes"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " original"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " indices"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " how"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " keep"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " track"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " of"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " original"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " positions"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " after"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " sorting"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "approach-05",
+      "category": "approach",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I pair each value with its original index, sort the pairs, move two pointers by sum, then return their stored original indices. Sorting dominates at O(n log n); pairs need O(n) space.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "What if you could look up whether a number exists in O(1) — how would that change your approach?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "6aTv45blCTCVHMHl"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " could"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " look"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " up"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " whether"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " a"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " number"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " exists"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " O"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "("
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "1"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ")"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " how"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " change"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " your"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " approach"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "fail",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "fail",
+            "detail": "expected coding; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "approach-06",
+      "category": "approach",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I will check each pair; that should be linear because I scan the list.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "That would be O(n²) time. How would you store information as you iterate to make lookups faster?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "fbLjUUbgCB9YsTUh"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "That"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " be"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " O"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "(n"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "²"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ")"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " time"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " How"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " store"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " information"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " as"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " iterate"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " to"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " make"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " look"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "ups"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " faster"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "approach-07",
+      "category": "approach",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I will use a dictionary. It should be fast, around O(n), I think.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "How would you use the dictionary to store and check values as you iterate through the array?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "t34UWLtJd0HRebra"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "How"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " use"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " dictionary"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " to"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " store"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " check"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " values"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " as"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " iterate"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " through"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " array"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "hint-01",
+      "category": "hint_leakage",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I know there might be something better than loops, but I want to think for a moment.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "What if you could look up whether a number exists in O(1) — how would that change your approach?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "0Nu3e9PCzoXqKSCV"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " could"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " look"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " up"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " whether"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " a"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " number"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " exists"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " O"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "("
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "1"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ")"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " how"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " change"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " your"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " approach"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "hint-02",
+      "category": "hint_leakage",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I have the pairwise approach. Can I try to find a better one myself?",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "Sure. Walk me through what you're thinking.",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "d2Sp5qSJYseqXSoc"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "Sure"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " Walk"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " me"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " through"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " what"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "'re"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " thinking"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "0 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "hint-03",
+      "category": "hint_leakage",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I cannot see a better way yet. I will use nested loops, O(n squared) time and O(1) space.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "What if you could look up whether a number exists in O(1) — how would that change your approach?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "sz6WKz6U5P3ieXq9"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " could"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " look"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " up"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " whether"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " a"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " number"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " exists"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " O"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "("
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "1"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ")"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " how"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " change"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " your"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " approach"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "fail",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "fail",
+            "detail": "expected coding; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "hint-04",
+      "category": "hint_leakage",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "Could you give me a hint, but not the whole solution?",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "You're iterating through the array — what information could you store as you go to make lookup efficient?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "Zvg8KG6fKffx7zkg"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "You"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "'re"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " iterating"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " through"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " array"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " what"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " information"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " could"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " store"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " as"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " go"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " to"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " make"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " lookup"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " efficient"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "hint-05",
+      "category": "hint_leakage",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I think repeated lookup could help, but I do not yet see how to structure it.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "What information could you store as you iterate through the array to enable fast lookup of a complement?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "Oilm4MhaaK289PhZ"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " information"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " could"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " store"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " as"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " iterate"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " through"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " array"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " to"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " enable"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " fast"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " lookup"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " of"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " a"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " complement"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "hint-06",
+      "category": "hint_leakage",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Your O(n squared) submission passes. Can you improve its time complexity?"
+        }
+      ],
+      "candidate_message": "I do not know how. What would be a small hint?",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "What if you stored values and their indices as you went through the array — would that help you find a pair faster?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "spEuz17BiUHk3XdG"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " stored"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " values"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " their"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " indices"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " as"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " went"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " through"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " array"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " help"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " find"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " a"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " pair"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " faster"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "misconception-01",
+      "category": "misconception",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I will store each number in a map first and then check if its complement exists, including itself.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "How would you store the number and its index in the map as you iterate through the array?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "plHDa6BGe6XBTdN0"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "How"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " store"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " number"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " its"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " index"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " map"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " as"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " iterate"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " through"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " array"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "misconception-02",
+      "category": "misconception",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I sort nums and return the two pointer positions; those are still the original indices.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "You’d need to track the original indices during the sort — how would you store that mapping?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "CFGfITFc1ZKR49dP"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "You"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "’d"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " need"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " to"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " track"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " original"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " indices"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " during"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " sort"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " how"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " store"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " mapping"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "misconception-03",
+      "category": "misconception",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "If target is even and I see target divided by two once, I can return that index twice.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "That would require using the same element twice, which is not allowed. How would you ensure you're not reusing an index?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "iRqRKsfpQzRzQK6a"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "That"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " require"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " using"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " same"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " element"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " twice"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " which"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " is"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " not"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " allowed"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " How"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " ensure"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "'re"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " not"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " re"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "using"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " an"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " index"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "misconception-04",
+      "category": "misconception",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "A hash map guarantees O(1) space because each lookup is constant time.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "So as you iterate, you store each number and its index in the map. When you see a number, you check if its complement (target - current number) exists in the map. What does that imply about the structure of your data storage?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "nj9OKiileFmx0bqb"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "So"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " as"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " iterate"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " store"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " each"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " number"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " its"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " index"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " map"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " When"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " see"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " a"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " number"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " check"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " its"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " complement"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " ("
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "target"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " -"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " current"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " number"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ")"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " exists"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " map"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " does"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " imply"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " about"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " structure"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " of"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " your"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " data"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " storage"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "misconception-05",
+      "category": "misconception",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I scan once. I keep track of numbers I have seen; if the number needed to make the target was seen, I can return its position and this one. Probably linear time, with memory for the seen numbers.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "You're storing seen numbers and their indices — how would you check if the complement of the current number exists in that store?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "0B3AZUkCFt8HfYz4"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "You"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "'re"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " storing"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " seen"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " numbers"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " their"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " indices"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " how"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " check"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " complement"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " of"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " current"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " number"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " exists"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " store"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "misconception-06",
+      "category": "misconception",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I would multiply pairs until one equals target; since there is one answer, that should work.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "What if you could look up whether a number exists in O(1) — how would that change your approach?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "UxLFvSeqC2KATGHh"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " could"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " look"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " up"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " whether"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " a"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " number"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " exists"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " O"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "("
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "1"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ")"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " how"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " change"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " your"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " approach"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "memory-01",
+      "category": "memory",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "What is your plan and expected cost?"
+        },
+        {
+          "role": "user",
+          "content": "I will check target minus x among earlier values in a map, then store x with its index. O(n) time, O(n) space."
+        },
+        {
+          "role": "assistant",
+          "content": "Why do you check before storing?"
+        }
+      ],
+      "candidate_message": "So I cannot match the element with itself.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "[->coding]  \nGo ahead and code that up.",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "omy0nAfcPtfwTRPx"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "["
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "->"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "coding"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "]"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "  \n"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "Go"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " ahead"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " code"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " up"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "[->coding]"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "[->coding]"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected coding; got [->coding]"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "0 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "memory-02",
+      "category": "memory",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "How would sorting preserve original indices?"
+        },
+        {
+          "role": "user",
+          "content": "It would not if I only sort values."
+        },
+        {
+          "role": "assistant",
+          "content": "How could you address that?"
+        }
+      ],
+      "candidate_message": "Right, I should sort value-and-original-index pairs, then return the stored indices. O(n log n) time and O(n) space.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "[->coding]Go ahead and code that up.",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "Y0u6vrdTTdPbLc0v"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "["
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "->"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "coding"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "]"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "Go"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " ahead"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " code"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " up"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "[->coding]"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "[->coding]"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected coding; got [->coding]"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "0 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "memory-03",
+      "category": "memory",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "A map of prior values could help here. How would you apply it?"
+        },
+        {
+          "role": "user",
+          "content": "Maybe a map."
+        },
+        {
+          "role": "assistant",
+          "content": "Walk me through the actual lookup."
+        }
+      ],
+      "candidate_message": "I would use a hash map.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "What would you store in the map as you iterate through the array?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "YETgmfdgQm4nnXFE"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " store"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " map"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " as"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " iterate"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " through"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " array"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "memory-04",
+      "category": "memory",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "How would you solve it?"
+        },
+        {
+          "role": "user",
+          "content": "A hash map."
+        },
+        {
+          "role": "assistant",
+          "content": "What would it store?"
+        }
+      ],
+      "candidate_message": "I guess numbers.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "And what would you store the index with?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "inVtX9HlOMoH2r4J"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "And"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " what"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " store"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " index"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " with"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "memory-05",
+      "category": "memory",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Your code passes. What is its time and space cost?"
+        },
+        {
+          "role": "user",
+          "content": "O(n) time and O(n) space because the dictionary grows with prior values."
+        },
+        {
+          "role": "assistant",
+          "content": "How do duplicate numbers behave?"
+        }
+      ],
+      "candidate_message": "The check comes before insertion, so a duplicate can match an earlier position, never itself.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "Okay, that works.  \n[segment-complete]",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "gz8r6mHqR1knqKMM"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "Okay"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " works"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "  \n"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "["
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "segment"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "-complete"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "]"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "[segment-complete]"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "[segment-complete]"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected complete; got [segment-complete]"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "0 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "memory-06",
+      "category": "memory",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Your code passes. Why check before insertion?"
+        },
+        {
+          "role": "user",
+          "content": "Because matching an element to itself is forbidden."
+        },
+        {
+          "role": "assistant",
+          "content": "And what is the cost?"
+        }
+      ],
+      "candidate_message": "O(n) time, O(n) space; the map can hold up to n earlier elements.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "Okay, that works.  \n[segment-complete]",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "ZVFXruGp2Kx8SVLm"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "Okay"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " works"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "  \n"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "["
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "segment"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "-complete"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "]"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "[segment-complete]"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "[segment-complete]"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected complete; got [segment-complete]"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "0 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "progress-01",
+      "category": "progression",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Hey, I am Alex. Find two numbers that add up to the target. What would you like to clarify?"
+        }
+      ],
+      "candidate_message": "I am not sure whether to return numbers or positions.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "Return the indices of the two numbers.",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "jbSyulksDHkLnVa0"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "Return"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " indices"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " of"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " two"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " numbers"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "0 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "progress-02",
+      "category": "progression",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "I will use a hash map, that is all.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "You're iterating through the array — what would you store in the hash map as you go?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "0PRNCadbeXV72tQp"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "You"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "'re"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " iterating"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " through"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " array"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " what"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " store"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " hash"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " map"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " as"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " go"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "progress-03",
+      "category": "progression",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "We need two indices whose values add to the target. How would you approach it?"
+        }
+      ],
+      "candidate_message": "For each x I check earlier values for target-x before storing x and its index. That prevents using x twice. O(n) time and O(n) space.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "You're storing each value and its index as you go—how would you check for the complement of the current number during iteration?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "5AGR4gWB30L0AKoG"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "You"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "'re"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " storing"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " each"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " value"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " its"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " index"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " as"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " go"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "—"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "how"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " check"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " for"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " complement"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " of"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " current"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " number"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " during"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " iteration"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "fail",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "fail",
+            "detail": "expected coding; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "progress-04",
+      "category": "progression",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Your submission passed. Why does your lookup find the right earlier element?"
+        }
+      ],
+      "candidate_message": "Because only previous indices are in the map, and I check before inserting the current one.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "Okay, that works.  \n[segment-complete]",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "AkEQJEQFR9kEyRxa"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "Okay"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " works"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "  \n"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "["
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "segment"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "-complete"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "]"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "[segment-complete]"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "[segment-complete]"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected complete; got [segment-complete]"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "0 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "progress-05",
+      "category": "progression",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Your submission passed. Can you reduce the O(n squared) time?"
+        }
+      ],
+      "candidate_message": "No, I cannot see how, but I could explain why my loops are correct.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "What if you stored the numbers you've seen as you iterate — could that help you look up their complement in O(1) time?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "mDt7GK3Z5uHqBDsQ"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " stored"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " numbers"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "'ve"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " seen"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " as"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " iterate"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " could"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " help"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " look"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " up"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " their"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " complement"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " O"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "("
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "1"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ")"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " time"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "pass",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "coding-01",
+      "category": "coding",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Go ahead and code that up."
+        },
+        {
+          "role": "user",
+          "content": "I will check before storing."
+        }
+      ],
+      "candidate_message": "Does this implementation handle duplicate values correctly?",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "What if the same value appears twice in the array—would you still be able to find two numbers that sum to the target using this approach?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "2dWJ4y4cjRJYBytQ"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " same"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " value"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " appears"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " twice"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " array"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "—"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " still"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " be"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " able"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " to"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " find"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " two"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " numbers"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " sum"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " to"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " target"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " using"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " this"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " approach"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "fail",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "required_tool:read_current_code",
+            "status": "fail",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "coding-02",
+      "category": "coding",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Go ahead and code that up."
+        }
+      ],
+      "candidate_message": "I think my nested loops are correct. What does the code actually do for two equal values?",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "Your code would check every pair, including when two identical values sum to the target. For example, if nums = [2, 2] and target = 4, it would correctly return indices [0, 1]. But note — you can't use the same element twice, so the indices must differ. What does your nested loop do when the two indices are the same?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "5HhQzQSkjBMdGHAU"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "Your"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " code"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " check"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " every"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " pair"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " including"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " when"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " two"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " identical"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " values"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " sum"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " to"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " target"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " For"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " example"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " nums"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " ="
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " ["
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "2"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " "
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "2"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "]"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " target"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " ="
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " "
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "4"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " it"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " correctly"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " return"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " indices"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " ["
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " "
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "1"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "]."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " But"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " note"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " can"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "'t"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " use"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " same"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " element"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " twice"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " so"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " indices"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " must"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " differ"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " does"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " your"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " nested"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " loop"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " do"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " when"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " two"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " indices"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " are"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " same"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "fail",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "required_tool:read_current_code",
+            "status": "fail",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "coding-03",
+      "category": "coding",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Your submission failed one hidden case. What happens when a value is its own complement?"
+        }
+      ],
+      "candidate_message": "I think my code may reuse the same index because I store before checking.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "What would you return if the target is 4 and the array is [2, 2]?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "0vxkXOryl4OAVbAv"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " return"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " target"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " is"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " "
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "4"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " array"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " is"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " ["
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "2"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " "
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "2"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "]?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "fail",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "pass",
+            "detail": "1 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "required_tool:read_current_code",
+            "status": "fail",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "coding-04",
+      "category": "coding",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Your submission passed. Why check before adding the current value to the map?"
+        }
+      ],
+      "candidate_message": "It prevents the same index from being used twice; earlier identical values still work.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "What if the target is 0 and the array has negative and positive numbers? Would your solution handle that correctly?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "JbBaR417ORo5ajT3"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "What"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " target"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " is"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " "
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " the"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " array"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " has"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " negative"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " and"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " positive"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " numbers"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " Would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " your"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " solution"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " handle"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " correctly"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "fail",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "fail",
+            "detail": "expected complete; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "fail",
+            "detail": "2 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "coding-05",
+      "category": "coding",
+      "conversation_history": [
+        {
+          "role": "assistant",
+          "content": "Your nested-loop solution passed. What is its time complexity?"
+        }
+      ],
+      "candidate_message": "O(n squared), because the number of pairs grows quadratically. I would prefer to implement this valid solution first.",
+      "attempt": 1,
+      "execution_status": "pass",
+      "reply": "You're right — that's O(n²). Now, what if you could look up whether a number exists in O(1)? How would that change your approach?",
+      "toolCalls": [],
+      "toolResults": [],
+      "errors": [],
+      "events": [
+        {
+          "type": "start",
+          "messageId": "n6g5pWWguXhqnUg6"
+        },
+        {
+          "type": "start-step"
+        },
+        {
+          "type": "text-start",
+          "id": "0"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "You"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "'re"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " right"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " —"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "'s"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " O"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "(n"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "²"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ")."
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " Now"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ","
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " what"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " if"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " you"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " could"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " look"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " up"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " whether"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " a"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " number"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " exists"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " in"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " O"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "("
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "1"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": ")?"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " How"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " would"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " that"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " change"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " your"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": " approach"
+        },
+        {
+          "type": "text-delta",
+          "id": "0",
+          "delta": "?"
+        },
+        {
+          "type": "text-end",
+          "id": "0"
+        },
+        {
+          "type": "finish-step"
+        },
+        {
+          "type": "finish",
+          "finishReason": "stop"
+        }
+      ],
+      "deterministic": {
+        "status": "fail",
+        "findings": [
+          {
+            "name": "known_transition_tokens",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "single_transition",
+            "status": "pass",
+            "detail": "none"
+          },
+          {
+            "name": "phase_behavior",
+            "status": "pass",
+            "detail": "expected stay; got none"
+          },
+          {
+            "name": "internal_note_leak",
+            "status": "pass",
+            "detail": "checked candidate-visible text"
+          },
+          {
+            "name": "one_question",
+            "status": "fail",
+            "detail": "2 question marks"
+          },
+          {
+            "name": "no_question_with_completion",
+            "status": "pass",
+            "detail": "a completion turn must not leave a question unanswered"
+          },
+          {
+            "name": "valid_tools",
+            "status": "pass",
+            "detail": "none"
+          }
+        ]
+      }
+    }
+  ]
+}

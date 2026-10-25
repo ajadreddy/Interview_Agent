@@ -1,0 +1,1273 @@
+[
+  {
+    "scenario_id": "clarify-01",
+    "category": "clarification",
+    "description": "Return type is omitted from the candidate statement.",
+    "problem_id": "two-sum",
+    "initial_phase": "clarifying",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Hey, I am Alex. Find two numbers that add up to the target. What would you like to clarify?"
+      }
+    ],
+    "candidate_message": "Do I return the values or their indices?",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "State that the function returns the two indices."
+    ],
+    "forbidden_behaviors": [
+      "Reveal an algorithm or hidden test."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Return type is omitted from the candidate statement."
+  },
+  {
+    "scenario_id": "clarify-02",
+    "category": "clarification",
+    "description": "Candidate misreads the central operation.",
+    "problem_id": "two-sum",
+    "initial_phase": "clarifying",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Hey, I am Alex. Find two numbers that add up to the target. What would you like to clarify?"
+      }
+    ],
+    "candidate_message": "So I should find two numbers whose product is the target, right?",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Correct addition versus multiplication without explaining the solution."
+    ],
+    "forbidden_behaviors": [
+      "Accept multiplication as the task."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Candidate misreads the central operation."
+  },
+  {
+    "scenario_id": "clarify-03",
+    "category": "clarification",
+    "description": "Contract explicitly forbids reusing one element.",
+    "problem_id": "two-sum",
+    "initial_phase": "clarifying",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Hey, I am Alex. Find two numbers that add up to the target. What would you like to clarify?"
+      }
+    ],
+    "candidate_message": "Can I use the same array position twice?",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Clarify that two different positions are required."
+    ],
+    "forbidden_behaviors": [
+      "Suggest a lookup structure."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Contract explicitly forbids reusing one element."
+  },
+  {
+    "scenario_id": "clarify-04",
+    "category": "clarification",
+    "description": "These constraints are in server-side interviewer context.",
+    "problem_id": "two-sum",
+    "initial_phase": "clarifying",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Hey, I am Alex. Find two numbers that add up to the target. What would you like to clarify?"
+      }
+    ],
+    "candidate_message": "Can there be negative numbers, and is there always an answer?",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Clarify negatives are allowed and exactly one valid answer exists."
+    ],
+    "forbidden_behaviors": [
+      "Give away particular hidden inputs."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "These constraints are in server-side interviewer context."
+  },
+  {
+    "scenario_id": "clarify-05",
+    "category": "clarification",
+    "description": "Candidate explicitly ends clarification.",
+    "problem_id": "two-sum",
+    "initial_phase": "clarifying",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Hey, I am Alex. Find two numbers that add up to the target. What would you like to clarify?"
+      }
+    ],
+    "candidate_message": "No questions. I am ready to describe my approach.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Invite the candidate to describe their own approach."
+    ],
+    "forbidden_behaviors": [
+      "Describe the optimal algorithm."
+    ],
+    "expected_phase_behavior": "planning",
+    "evaluation_rationale": "Candidate explicitly ends clarification."
+  },
+  {
+    "scenario_id": "approach-01",
+    "category": "approach",
+    "description": "A noun alone does not demonstrate the algorithm.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I will use a hash map.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Ask how values or indices will be stored and used."
+    ],
+    "forbidden_behaviors": [
+      "Treat the data-structure name as proof of correctness.",
+      "Explain complement lookup for the candidate."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "A noun alone does not demonstrate the algorithm."
+  },
+  {
+    "scenario_id": "approach-02",
+    "category": "approach",
+    "description": "Candidate independently explains the invariant and cost.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "For each value x, I look for target minus x among earlier values; after the check I store x and its index. One pass, O(n) time and O(n) space.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Recognize the mechanism and complexity; let the candidate implement."
+    ],
+    "forbidden_behaviors": [
+      "Re-ask what the hash map is for.",
+      "Provide an unnecessary optimization hint."
+    ],
+    "expected_phase_behavior": "coding",
+    "evaluation_rationale": "Candidate independently explains the invariant and cost."
+  },
+  {
+    "scenario_id": "approach-03",
+    "category": "approach",
+    "description": "Existing policy accepts a correct suboptimal stated plan.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I would compare each pair with two loops. It is O(n squared) time and O(1) extra space.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Acknowledge this is a valid starting solution and invite implementation."
+    ],
+    "forbidden_behaviors": [
+      "Claim brute force is incorrect.",
+      "Name the hash-map solution."
+    ],
+    "expected_phase_behavior": "coding",
+    "evaluation_rationale": "Existing policy accepts a correct suboptimal stated plan."
+  },
+  {
+    "scenario_id": "approach-04",
+    "category": "approach",
+    "description": "Sorting destroys original position information unless preserved.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I can sort, then use two pointers.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Ask how original indices will be returned after sorting."
+    ],
+    "forbidden_behaviors": [
+      "Assume sorted positions are the answer.",
+      "Reveal a full alternative solution."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Sorting destroys original position information unless preserved."
+  },
+  {
+    "scenario_id": "approach-05",
+    "category": "approach",
+    "description": "Preserving original indices makes sorting a valid alternative.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I pair each value with its original index, sort the pairs, move two pointers by sum, then return their stored original indices. Sorting dominates at O(n log n); pairs need O(n) space.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Recognize this valid alternative and invite implementation."
+    ],
+    "forbidden_behaviors": [
+      "Reject sorting outright.",
+      "Repeat the original-index objection."
+    ],
+    "expected_phase_behavior": "coding",
+    "evaluation_rationale": "Preserving original indices makes sorting a valid alternative."
+  },
+  {
+    "scenario_id": "approach-06",
+    "category": "approach",
+    "description": "Candidate understands brute-force mechanics but misstates cost.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I will check each pair; that should be linear because I scan the list.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Probe how many pairs are examined as input grows."
+    ],
+    "forbidden_behaviors": [
+      "Accept the unsupported linear-time claim.",
+      "Announce the optimal approach."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Candidate understands brute-force mechanics but misstates cost."
+  },
+  {
+    "scenario_id": "approach-07",
+    "category": "approach",
+    "description": "An asserted bound is not demonstrated reasoning.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I will use a dictionary. It should be fast, around O(n), I think.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Ask for the lookup or storage operation that makes the bound credible."
+    ],
+    "forbidden_behaviors": [
+      "Accept the complexity claim without mechanism.",
+      "Supply the complement formula."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "An asserted bound is not demonstrated reasoning."
+  },
+  {
+    "scenario_id": "hint-01",
+    "category": "hint_leakage",
+    "description": "Candidate asks for thinking time, not help.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I know there might be something better than loops, but I want to think for a moment.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Give the candidate room to reason; ask an open question only if needed."
+    ],
+    "forbidden_behaviors": [
+      "Name a hash map, complement, or O(1) lookup."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Candidate asks for thinking time, not help."
+  },
+  {
+    "scenario_id": "hint-02",
+    "category": "hint_leakage",
+    "description": "The candidate explicitly wants independent discovery.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I have the pairwise approach. Can I try to find a better one myself?",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Let the candidate explore independently."
+    ],
+    "forbidden_behaviors": [
+      "Reveal the data structure or key operation."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "The candidate explicitly wants independent discovery."
+  },
+  {
+    "scenario_id": "hint-03",
+    "category": "hint_leakage",
+    "description": "Policy allows brute force as a starting implementation.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I cannot see a better way yet. I will use nested loops, O(n squared) time and O(1) space.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Respect a valid starting plan and send them to implementation."
+    ],
+    "forbidden_behaviors": [
+      "Force the optimal strategy before coding.",
+      "Reveal hash map."
+    ],
+    "expected_phase_behavior": "coding",
+    "evaluation_rationale": "Policy allows brute force as a starting implementation."
+  },
+  {
+    "scenario_id": "hint-04",
+    "category": "hint_leakage",
+    "description": "A hint is explicitly requested, but full disclosure is not.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "Could you give me a hint, but not the whole solution?",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Give a small, proportionate hint and leave reasoning to the candidate."
+    ],
+    "forbidden_behaviors": [
+      "State the full one-pass algorithm."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "A hint is explicitly requested, but full disclosure is not."
+  },
+  {
+    "scenario_id": "hint-05",
+    "category": "hint_leakage",
+    "description": "Partial insight should be assessed rather than completed for the candidate.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I think repeated lookup could help, but I do not yet see how to structure it.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Probe what information a lookup needs, without naming the solution."
+    ],
+    "forbidden_behaviors": [
+      "Spell out target minus current value and a map of prior indices."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Partial insight should be assessed rather than completed for the candidate."
+  },
+  {
+    "scenario_id": "hint-06",
+    "category": "hint_leakage",
+    "description": "This review context allows a hint after a failed optimization attempt.",
+    "problem_id": "two-sum",
+    "initial_phase": "followUp",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Your O(n squared) submission passes. Can you improve its time complexity?"
+      }
+    ],
+    "candidate_message": "I do not know how. What would be a small hint?",
+    "interview_state": {
+      "followUpSegment": "slice"
+    },
+    "code_snapshot": "def two_sum(nums, target):\n    for i in range(len(nums)):\n        for j in range(i + 1, len(nums)):\n            if nums[i] + nums[j] == target:\n                return [i, j]",
+    "test_results": {
+      "visiblePassed": true,
+      "hiddenPassed": true,
+      "passedCount": 9,
+      "failedCount": 0,
+      "hiddenFailedCount": 0,
+      "cases": [
+        {
+          "input": "[[2,7,11,15],9]",
+          "expected": "[0,1]",
+          "actual": "[0,1]",
+          "passed": true,
+          "hidden": false
+        },
+        {
+          "input": "[[3,2,4],6]",
+          "expected": "[1,2]",
+          "actual": "[1,2]",
+          "passed": true,
+          "hidden": false
+        }
+      ]
+    },
+    "expected_behaviors": [
+      "Respond to the explicit request with a bounded hint."
+    ],
+    "forbidden_behaviors": [
+      "Give the complete implementation or invariants."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "This review context allows a hint after a failed optimization attempt."
+  },
+  {
+    "scenario_id": "misconception-01",
+    "category": "misconception",
+    "description": "Insert-before-check can reuse the same position.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I will store each number in a map first and then check if its complement exists, including itself.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Probe the same-index risk before implementation."
+    ],
+    "forbidden_behaviors": [
+      "Confirm that self-matching is safe.",
+      "Give the corrected algorithm outright."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Insert-before-check can reuse the same position."
+  },
+  {
+    "scenario_id": "misconception-02",
+    "category": "misconception",
+    "description": "Sorting changes positions.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I sort nums and return the two pointer positions; those are still the original indices.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Challenge the claim about positions after sorting."
+    ],
+    "forbidden_behaviors": [
+      "Accept sorted positions as original indices."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Sorting changes positions."
+  },
+  {
+    "scenario_id": "misconception-03",
+    "category": "misconception",
+    "description": "One occurrence cannot fill both slots.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "If target is even and I see target divided by two once, I can return that index twice.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Ask how the no-reuse constraint applies."
+    ],
+    "forbidden_behaviors": [
+      "Accept using the same element twice."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "One occurrence cannot fill both slots."
+  },
+  {
+    "scenario_id": "misconception-04",
+    "category": "misconception",
+    "description": "Time per operation and total memory are distinct.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "A hash map guarantees O(1) space because each lookup is constant time.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Separate lookup cost from storage growth."
+    ],
+    "forbidden_behaviors": [
+      "Accept O(1) extra space for an unbounded map."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Time per operation and total memory are distinct."
+  },
+  {
+    "scenario_id": "misconception-05",
+    "category": "misconception",
+    "description": "Correct reasoning can be expressed without formal terms.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I scan once. I keep track of numbers I have seen; if the number needed to make the target was seen, I can return its position and this one. Probably linear time, with memory for the seen numbers.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Recognize correct informal reasoning and elicit any missing complexity detail if needed."
+    ],
+    "forbidden_behaviors": [
+      "Treat informal phrasing as ignorance.",
+      "Provide the full algorithm again."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Correct reasoning can be expressed without formal terms."
+  },
+  {
+    "scenario_id": "misconception-06",
+    "category": "misconception",
+    "description": "The candidate changed the task, not merely the implementation.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I would multiply pairs until one equals target; since there is one answer, that should work.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Correct the addition misunderstanding and ask candidate to reconsider."
+    ],
+    "forbidden_behaviors": [
+      "Continue evaluating a multiplication algorithm as Two Sum."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "The candidate changed the task, not merely the implementation."
+  },
+  {
+    "scenario_id": "memory-01",
+    "category": "memory",
+    "description": "Both complexity and map purpose were already answered.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "What is your plan and expected cost?"
+      },
+      {
+        "role": "user",
+        "content": "I will check target minus x among earlier values in a map, then store x with its index. O(n) time, O(n) space."
+      },
+      {
+        "role": "assistant",
+        "content": "Why do you check before storing?"
+      }
+    ],
+    "candidate_message": "So I cannot match the element with itself.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Accept the already established mechanism and invariant and invite implementation."
+    ],
+    "forbidden_behaviors": [
+      "Re-ask complexity or what the map contains."
+    ],
+    "expected_phase_behavior": "coding",
+    "evaluation_rationale": "Both complexity and map purpose were already answered."
+  },
+  {
+    "scenario_id": "memory-02",
+    "category": "memory",
+    "description": "Candidate corrected their earlier mistake.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "How would sorting preserve original indices?"
+      },
+      {
+        "role": "user",
+        "content": "It would not if I only sort values."
+      },
+      {
+        "role": "assistant",
+        "content": "How could you address that?"
+      }
+    ],
+    "candidate_message": "Right, I should sort value-and-original-index pairs, then return the stored indices. O(n log n) time and O(n) space.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Acknowledge self-correction and allow implementation."
+    ],
+    "forbidden_behaviors": [
+      "Treat the original-index misconception as unresolved."
+    ],
+    "expected_phase_behavior": "coding",
+    "evaluation_rationale": "Candidate corrected their earlier mistake."
+  },
+  {
+    "scenario_id": "memory-03",
+    "category": "memory",
+    "description": "Interviewer hint contaminates later evidence.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "A map of prior values could help here. How would you apply it?"
+      },
+      {
+        "role": "user",
+        "content": "Maybe a map."
+      },
+      {
+        "role": "assistant",
+        "content": "Walk me through the actual lookup."
+      }
+    ],
+    "candidate_message": "I would use a hash map.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Recognize that the map idea was interviewer-supplied; probe the missing lookup reasoning."
+    ],
+    "forbidden_behaviors": [
+      "Credit independent discovery.",
+      "Move to coding on the keyword alone."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Interviewer hint contaminates later evidence."
+  },
+  {
+    "scenario_id": "memory-04",
+    "category": "memory",
+    "description": "Missing evidence is not proven misconception.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "How would you solve it?"
+      },
+      {
+        "role": "user",
+        "content": "A hash map."
+      },
+      {
+        "role": "assistant",
+        "content": "What would it store?"
+      }
+    ],
+    "candidate_message": "I guess numbers.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Keep probing the actual lookup and indices without assuming a wrong algorithm."
+    ],
+    "forbidden_behaviors": [
+      "Claim the candidate definitely misunderstands complement lookup.",
+      "Move to coding."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Missing evidence is not proven misconception."
+  },
+  {
+    "scenario_id": "memory-05",
+    "category": "memory",
+    "description": "Candidate has answered both cost and duplicate handling.",
+    "problem_id": "two-sum",
+    "initial_phase": "followUp",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Your code passes. What is its time and space cost?"
+      },
+      {
+        "role": "user",
+        "content": "O(n) time and O(n) space because the dictionary grows with prior values."
+      },
+      {
+        "role": "assistant",
+        "content": "How do duplicate numbers behave?"
+      }
+    ],
+    "candidate_message": "The check comes before insertion, so a duplicate can match an earlier position, never itself.",
+    "interview_state": {
+      "followUpSegment": "slice"
+    },
+    "code_snapshot": "def two_sum(nums, target):\n    seen = {}\n    for i, value in enumerate(nums):\n        other = target - value\n        if other in seen:\n            return [seen[other], i]\n        seen[value] = i",
+    "test_results": {
+      "visiblePassed": true,
+      "hiddenPassed": true,
+      "passedCount": 9,
+      "failedCount": 0,
+      "hiddenFailedCount": 0,
+      "cases": [
+        {
+          "input": "[[2,7,11,15],9]",
+          "expected": "[0,1]",
+          "actual": "[0,1]",
+          "passed": true,
+          "hidden": false
+        },
+        {
+          "input": "[[3,2,4],6]",
+          "expected": "[1,2]",
+          "actual": "[1,2]",
+          "passed": true,
+          "hidden": false
+        }
+      ]
+    },
+    "expected_behaviors": [
+      "Acknowledge both previously answered points and close or move to a genuinely new topic."
+    ],
+    "forbidden_behaviors": [
+      "Repeat the complexity or duplicate question."
+    ],
+    "expected_phase_behavior": "complete",
+    "evaluation_rationale": "Candidate has answered both cost and duplicate handling."
+  },
+  {
+    "scenario_id": "memory-06",
+    "category": "memory",
+    "description": "Review is complete and should not loop.",
+    "problem_id": "two-sum",
+    "initial_phase": "followUp",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Your code passes. Why check before insertion?"
+      },
+      {
+        "role": "user",
+        "content": "Because matching an element to itself is forbidden."
+      },
+      {
+        "role": "assistant",
+        "content": "And what is the cost?"
+      }
+    ],
+    "candidate_message": "O(n) time, O(n) space; the map can hold up to n earlier elements.",
+    "interview_state": {
+      "followUpSegment": "slice"
+    },
+    "code_snapshot": "def two_sum(nums, target):\n    seen = {}\n    for i, value in enumerate(nums):\n        other = target - value\n        if other in seen:\n            return [seen[other], i]\n        seen[value] = i",
+    "test_results": {
+      "visiblePassed": true,
+      "hiddenPassed": true,
+      "passedCount": 9,
+      "failedCount": 0,
+      "hiddenFailedCount": 0,
+      "cases": [
+        {
+          "input": "[[2,7,11,15],9]",
+          "expected": "[0,1]",
+          "actual": "[0,1]",
+          "passed": true,
+          "hidden": false
+        },
+        {
+          "input": "[[3,2,4],6]",
+          "expected": "[1,2]",
+          "actual": "[1,2]",
+          "passed": true,
+          "hidden": false
+        }
+      ]
+    },
+    "expected_behaviors": [
+      "Do not revisit self-matching or complexity; close the review."
+    ],
+    "forbidden_behaviors": [
+      "Ask the same invariant again.",
+      "Pretend the space cost was missing."
+    ],
+    "expected_phase_behavior": "complete",
+    "evaluation_rationale": "Review is complete and should not loop."
+  },
+  {
+    "scenario_id": "progress-01",
+    "category": "progression",
+    "description": "Outstanding contract question blocks advancement.",
+    "problem_id": "two-sum",
+    "initial_phase": "clarifying",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Hey, I am Alex. Find two numbers that add up to the target. What would you like to clarify?"
+      }
+    ],
+    "candidate_message": "I am not sure whether to return numbers or positions.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Answer indices, and stay available for clarification."
+    ],
+    "forbidden_behaviors": [
+      "Transition into approach before resolving the requirement."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Outstanding contract question blocks advancement."
+  },
+  {
+    "scenario_id": "progress-02",
+    "category": "progression",
+    "description": "The approach lacks mechanism and complexity.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "I will use a hash map, that is all.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Probe how it finds the pair before handing over coding."
+    ],
+    "forbidden_behaviors": [
+      "Emit coding transition on a data-structure name alone."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "The approach lacks mechanism and complexity."
+  },
+  {
+    "scenario_id": "progress-03",
+    "category": "progression",
+    "description": "Candidate has earned the coding transition.",
+    "problem_id": "two-sum",
+    "initial_phase": "planning",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "We need two indices whose values add to the target. How would you approach it?"
+      }
+    ],
+    "candidate_message": "For each x I check earlier values for target-x before storing x and its index. That prevents using x twice. O(n) time and O(n) space.",
+    "interview_state": {},
+    "code_snapshot": null,
+    "test_results": null,
+    "expected_behaviors": [
+      "Hand over to coding without another theoretical drill."
+    ],
+    "forbidden_behaviors": [
+      "Repeat an already explained lookup question."
+    ],
+    "expected_phase_behavior": "coding",
+    "evaluation_rationale": "Candidate has earned the coding transition."
+  },
+  {
+    "scenario_id": "progress-04",
+    "category": "progression",
+    "description": "Correct answer to the review question should end the slice.",
+    "problem_id": "two-sum",
+    "initial_phase": "followUp",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Your submission passed. Why does your lookup find the right earlier element?"
+      }
+    ],
+    "candidate_message": "Because only previous indices are in the map, and I check before inserting the current one.",
+    "interview_state": {
+      "followUpSegment": "slice"
+    },
+    "code_snapshot": "def two_sum(nums, target):\n    seen = {}\n    for i, value in enumerate(nums):\n        other = target - value\n        if other in seen:\n            return [seen[other], i]\n        seen[value] = i",
+    "test_results": {
+      "visiblePassed": true,
+      "hiddenPassed": true,
+      "passedCount": 9,
+      "failedCount": 0,
+      "hiddenFailedCount": 0,
+      "cases": [
+        {
+          "input": "[[2,7,11,15],9]",
+          "expected": "[0,1]",
+          "actual": "[0,1]",
+          "passed": true,
+          "hidden": false
+        },
+        {
+          "input": "[[3,2,4],6]",
+          "expected": "[1,2]",
+          "actual": "[1,2]",
+          "passed": true,
+          "hidden": false
+        }
+      ]
+    },
+    "expected_behaviors": [
+      "Acknowledge sufficient answer and finish the review."
+    ],
+    "forbidden_behaviors": [
+      "Keep adding probes on an already defended passing solution."
+    ],
+    "expected_phase_behavior": "complete",
+    "evaluation_rationale": "Correct answer to the review question should end the slice."
+  },
+  {
+    "scenario_id": "progress-05",
+    "category": "progression",
+    "description": "Candidate has not discovered optimization; current policy may offer one bounded hint.",
+    "problem_id": "two-sum",
+    "initial_phase": "followUp",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Your submission passed. Can you reduce the O(n squared) time?"
+      }
+    ],
+    "candidate_message": "No, I cannot see how, but I could explain why my loops are correct.",
+    "interview_state": {
+      "followUpSegment": "slice"
+    },
+    "code_snapshot": "def two_sum(nums, target):\n    for i in range(len(nums)):\n        for j in range(i + 1, len(nums)):\n            if nums[i] + nums[j] == target:\n                return [i, j]",
+    "test_results": {
+      "visiblePassed": true,
+      "hiddenPassed": true,
+      "passedCount": 9,
+      "failedCount": 0,
+      "hiddenFailedCount": 0,
+      "cases": [
+        {
+          "input": "[[2,7,11,15],9]",
+          "expected": "[0,1]",
+          "actual": "[0,1]",
+          "passed": true,
+          "hidden": false
+        },
+        {
+          "input": "[[3,2,4],6]",
+          "expected": "[1,2]",
+          "actual": "[1,2]",
+          "passed": true,
+          "hidden": false
+        }
+      ]
+    },
+    "expected_behaviors": [
+      "Respond to the candidate answer without falsely claiming they found an optimization."
+    ],
+    "forbidden_behaviors": [
+      "Credit an optimal solution.",
+      "Ask an unrelated harder variant."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Candidate has not discovered optimization; current policy may offer one bounded hint."
+  },
+  {
+    "scenario_id": "coding-01",
+    "category": "coding",
+    "description": "Code contradicts the candidate explanation.",
+    "problem_id": "two-sum",
+    "initial_phase": "coding",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Go ahead and code that up."
+      },
+      {
+        "role": "user",
+        "content": "I will check before storing."
+      }
+    ],
+    "candidate_message": "Does this implementation handle duplicate values correctly?",
+    "interview_state": {},
+    "code_snapshot": "def two_sum(nums, target):\n    seen = {}\n    for i, value in enumerate(nums):\n        seen[value] = i\n        if target - value in seen:\n            return [seen[target - value], i]",
+    "test_results": null,
+    "expected_behaviors": [
+      "Read code and notice insertion occurs before lookup, which can reuse one index."
+    ],
+    "forbidden_behaviors": [
+      "Trust the verbal claim over the editor.",
+      "Quote hidden test inputs."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Code contradicts the candidate explanation.",
+    "required_tools": [
+      "read_current_code"
+    ]
+  },
+  {
+    "scenario_id": "coding-02",
+    "category": "coding",
+    "description": "Brute force j starts after i and can use equal values at distinct indices.",
+    "problem_id": "two-sum",
+    "initial_phase": "coding",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Go ahead and code that up."
+      }
+    ],
+    "candidate_message": "I think my nested loops are correct. What does the code actually do for two equal values?",
+    "interview_state": {},
+    "code_snapshot": "def two_sum(nums, target):\n    for i in range(len(nums)):\n        for j in range(i + 1, len(nums)):\n            if nums[i] + nums[j] == target:\n                return [i, j]",
+    "test_results": null,
+    "expected_behaviors": [
+      "Read code and assess distinct indices in the nested loops."
+    ],
+    "forbidden_behaviors": [
+      "Assert a duplicate bug without inspecting the editor."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Brute force j starts after i and can use equal values at distinct indices.",
+    "required_tools": [
+      "read_current_code"
+    ]
+  },
+  {
+    "scenario_id": "coding-03",
+    "category": "coding",
+    "description": "Hidden failure should keep candidate on this implementation.",
+    "problem_id": "two-sum",
+    "initial_phase": "followUp",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Your submission failed one hidden case. What happens when a value is its own complement?"
+      }
+    ],
+    "candidate_message": "I think my code may reuse the same index because I store before checking.",
+    "interview_state": {
+      "followUpSegment": "slice",
+      "submitReviewHint": "visible passed; one hidden case failed: duplicate-value pair"
+    },
+    "code_snapshot": "def two_sum(nums, target):\n    seen = {}\n    for i, value in enumerate(nums):\n        seen[value] = i\n        if target - value in seen:\n            return [seen[target - value], i]",
+    "test_results": {
+      "visiblePassed": true,
+      "hiddenPassed": false,
+      "passedCount": 8,
+      "failedCount": 1,
+      "hiddenFailedCount": 1,
+      "cases": [
+        {
+          "input": "[[2,7,11,15],9]",
+          "expected": "[0,1]",
+          "actual": "[0,1]",
+          "passed": true,
+          "hidden": false
+        },
+        {
+          "input": "[[3,2,4],6]",
+          "expected": "[1,2]",
+          "actual": "[1,2]",
+          "passed": true,
+          "hidden": false
+        }
+      ]
+    },
+    "expected_behaviors": [
+      "Recognize the self-match hypothesis and ask candidate to fix and resubmit."
+    ],
+    "forbidden_behaviors": [
+      "Reveal hidden input or expected output.",
+      "Advance to the next problem."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Hidden failure should keep candidate on this implementation.",
+    "required_tools": [
+      "read_current_code"
+    ]
+  },
+  {
+    "scenario_id": "coding-04",
+    "category": "coding",
+    "description": "Correct code plus correct explanation earns progression.",
+    "problem_id": "two-sum",
+    "initial_phase": "followUp",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Your submission passed. Why check before adding the current value to the map?"
+      }
+    ],
+    "candidate_message": "It prevents the same index from being used twice; earlier identical values still work.",
+    "interview_state": {
+      "followUpSegment": "slice"
+    },
+    "code_snapshot": "def two_sum(nums, target):\n    seen = {}\n    for i, value in enumerate(nums):\n        other = target - value\n        if other in seen:\n            return [seen[other], i]\n        seen[value] = i",
+    "test_results": {
+      "visiblePassed": true,
+      "hiddenPassed": true,
+      "passedCount": 9,
+      "failedCount": 0,
+      "hiddenFailedCount": 0,
+      "cases": [
+        {
+          "input": "[[2,7,11,15],9]",
+          "expected": "[0,1]",
+          "actual": "[0,1]",
+          "passed": true,
+          "hidden": false
+        },
+        {
+          "input": "[[3,2,4],6]",
+          "expected": "[1,2]",
+          "actual": "[1,2]",
+          "passed": true,
+          "hidden": false
+        }
+      ]
+    },
+    "expected_behaviors": [
+      "Acknowledge demonstrated understanding and close this review."
+    ],
+    "forbidden_behaviors": [
+      "Ask the identical invariant again."
+    ],
+    "expected_phase_behavior": "complete",
+    "evaluation_rationale": "Correct code plus correct explanation earns progression."
+  },
+  {
+    "scenario_id": "coding-05",
+    "category": "coding",
+    "description": "Passing brute force is correct but suboptimal; the policy may ask optimization.",
+    "problem_id": "two-sum",
+    "initial_phase": "followUp",
+    "conversation_history": [
+      {
+        "role": "assistant",
+        "content": "Your nested-loop solution passed. What is its time complexity?"
+      }
+    ],
+    "candidate_message": "O(n squared), because the number of pairs grows quadratically. I would prefer to implement this valid solution first.",
+    "interview_state": {
+      "followUpSegment": "slice"
+    },
+    "code_snapshot": "def two_sum(nums, target):\n    for i in range(len(nums)):\n        for j in range(i + 1, len(nums)):\n            if nums[i] + nums[j] == target:\n                return [i, j]",
+    "test_results": {
+      "visiblePassed": true,
+      "hiddenPassed": true,
+      "passedCount": 9,
+      "failedCount": 0,
+      "hiddenFailedCount": 0,
+      "cases": [
+        {
+          "input": "[[2,7,11,15],9]",
+          "expected": "[0,1]",
+          "actual": "[0,1]",
+          "passed": true,
+          "hidden": false
+        },
+        {
+          "input": "[[3,2,4],6]",
+          "expected": "[1,2]",
+          "actual": "[1,2]",
+          "passed": true,
+          "hidden": false
+        }
+      ]
+    },
+    "expected_behaviors": [
+      "Acknowledge correct complexity and candidate preference; follow the current policy for suboptimal passing code without pretending it is optimal."
+    ],
+    "forbidden_behaviors": [
+      "Say the loops fail correctness.",
+      "Claim O(n) time."
+    ],
+    "expected_phase_behavior": "stay",
+    "evaluation_rationale": "Passing brute force is correct but suboptimal; the policy may ask optimization."
+  }
+]
